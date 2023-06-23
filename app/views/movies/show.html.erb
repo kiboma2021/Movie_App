@@ -13,6 +13,10 @@
   <% for post in @movie.posts %>
     <p>
       <%= post.post %>
+      <div>
+        <%= button_to "Edit", edit_movie_post_path(post) %>
+        <%= button_to "Delete", @post, method: :delete %>
+      </div>
     </p>
   <% end %>
 </div>
