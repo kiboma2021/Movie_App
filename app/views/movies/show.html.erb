@@ -8,3 +8,15 @@
 
   <%= button_to "Destroy this movie", @movie, method: :delete %>
 </div>
+
+<div id="posts">
+  <% for post in @movie.posts %>
+    <p>
+      <%= post.post %>
+    </p>
+  <% end %>
+</div>
+
+
+
+<%= link_to "Add Comment", new_movie_post_path(@movie) %>
