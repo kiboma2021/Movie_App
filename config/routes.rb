@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  resources :posts
   root "movies#index"
-  resources :movies
+  
+  resources :movies do
+    resources :posts
+  end
   
 end
